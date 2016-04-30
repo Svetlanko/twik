@@ -1,10 +1,6 @@
 class Reply < ActiveRecord::Base
 
-  has_many :votes, as: :votable
+  include Votable
   belongs_to :twits
 
-  def vote!
-  	votes.create
-  end
-  
 end

@@ -1,10 +1,6 @@
 class Twit < ActiveRecord::Base
-
-	has_many :votes, as: :votable
+  
+  include Votable
   has_many :replies 
-
-  def vote!
-    votes.create
-  end
 
 end
